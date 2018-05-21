@@ -23,8 +23,13 @@
 .main-carousel .carousel-cell .container {
   width: 1200px;
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   color: white;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.main-carousel .carousel-cell .container h1 {
+  opacity: 0.8;
 }
 
 .flickity-button {
