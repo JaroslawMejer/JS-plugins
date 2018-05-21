@@ -1,0 +1,74 @@
+.main-carousel{
+	width: 100%;
+	height: 50vh;
+	.carousel-cell {
+		width: 100%; /* full width */
+		height: 100%; /* height of carousel */
+		min-height: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		.container{
+			width: 1200px;
+			text-align: center;
+			font-size: 35px;
+			color: white;
+		}
+	}
+}
+.flickity-button {
+  background: transparent;
+  &:hover{
+  	background: transparent;
+  }
+}
+/* big previous & next buttons */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+/* hide disabled button */
+.flickity-button:disabled {
+  display: none;
+}
+.flickity-page-dots {
+  bottom: 0px;
+  display: none;
+}
+
+.button{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: transparent;
+	border:2px solid #e6e6e6;
+	border-radius: 10px;
+	opacity: 0.8;
+	transition: all 0.5s;
+	z-index: 5000;
+	&:hover{
+		background-color: #e6e6e6;
+	}
+	&:hover a{
+		color: black;
+	}
+	a{
+		text-decoration: none;
+		color: #e6e6e6;
+		transition: all 0.5s;
+	}
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+}
+
