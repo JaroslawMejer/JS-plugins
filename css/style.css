@@ -91,5 +91,13 @@
   height: 20px;
   width: 0;
   background: #333;
+  transform: translateY(-100%);
+  z-index: 5000;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  transform: translateY(-20px);
 }
 /*# sourceMappingURL=style.css.map */
