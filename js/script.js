@@ -32,13 +32,34 @@ flkty.on( 'scroll', function( progress ) {
 // GOOGLE MAPS
 
 window.initMap = function() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var greenLand = {lat: 71.706936, lng: -42.604303000000016};
+        var puszczaPoland = {lat: 52.7228852, lng: 23.655567399999995};
+        var miamiBeach = {lat: 25.790654, lng: -80.1300455};
+        var wroclawCity = {lat: 51.1078852, lng: 17.03853760000004};
+        var iceland = {lat: 64.963051, lng: -19.020835000000034};
+        
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: uluru
+          center: greenLand
         });
+
+        var contentString = '<div id="content">'+
+            '<h1 id="firstHeading" class="firstHeading">Greenland</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Greenland</b>, amazing sky <b>full of colors</b>.'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
         var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+          position: greenLand,
+          map: map,
+          title: 'Greenland'
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
         });
       }
