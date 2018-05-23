@@ -29,6 +29,8 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+
+
 // GOOGLE MAPS
 
 window.initMap = function() {
@@ -45,5 +47,9 @@ window.initMap = function() {
             map: map,
             title: SlideList[i].title
           });
+
+          marker.addListener('click', function(index){
+            console.log(index);
+          })
         }
       }

@@ -25,36 +25,41 @@
 					image: 'https://i.ytimg.com/vi/bfgcFJFE3mE/maxresdefault.jpg',
 					title: 'Amazing sky',
 					description: '<p>Full of colors</p>',
-					coords: {lat: 71.706936, lng: -42.604303000000016}
+					coords: {lat: 71.706936, lng: -42.604303000000016},
+					id: 'carousel-cell1'
 				},
 				{
 					image: 'http://www.worldtravelstours.com/wp-content/uploads/2018/01/Maroon-Bells-USA-9-Most-Beautiful-Places-in-the-USA-.jpg',
 					title: 'Breathtaking forest',
 					description: '<p>With lots of animals</p>',
-					coords: {lat: 52.7228852, lng: 23.655567399999995}
+					coords: {lat: 52.7228852, lng: 23.655567399999995},
+					id: 'carousel-cell2'
 				},
 				{
 					image: 'http://listtop10s.com/wp-content/uploads/2013/09/Jamaica-most-beautiful-honeymoon-destinations.jpg);" id="carousel-cell3',
 					title: 'Beautiful beach',
 					description: '<p>Full of golden sand</p>',
-					coords: {lat: 25.790654, lng: -80.1300455}
+					coords: {lat: 25.790654, lng: -80.1300455},
+					id: 'carousel-cell3'
 				},
 				{
 					image: 'http://thairestaurantboston.us/wp-content/uploads/beautiful-places-of-world-beautiful-places-of-world-pinterest-beautiful-cities-in-usa-beautiful-cities-in-usa.jpeg',
 					title: 'Living city',
 					description: '<p>Overflown with great people</p>',
-					coords: {lat: 51.1078852, lng: 17.03853760000004}
+					coords: {lat: 51.1078852, lng: 17.03853760000004},
+					id: 'carousel-cell4'
 				},
 				{
 					image: 'http://www.holiday-square.co.uk/wp-content/uploads/2013/12/Iceland.jpg',
 					title: 'Iceland',
 					description: '<p>Where you can calmly think</p>',
-					coords: {lat: 64.963051, lng: -19.020835000000034}
+					coords: {lat: 64.963051, lng: -19.020835000000034},
+					id: 'carousel-cell5'
 				},
 			]
 		</script>
 		<script id="template-slides" type="x-tmpl-mustache">
-			<div class="carousel-cell" style="background-image: url({{ image }});" id="carousel-cell1">
+			<div class="carousel-cell" style="background-image: url({{ image }});" id="{{id}}">
 
 				<div class="container">
 					<h1> {{ title }}</h1>
