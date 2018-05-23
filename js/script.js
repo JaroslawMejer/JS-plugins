@@ -29,6 +29,12 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+var resetButton = document.getElementById('reset-button')
+
+resetButton.addEventListener('click', function(){
+  flkty.select (0)
+})
+
 
 
 // GOOGLE MAPS
@@ -41,15 +47,25 @@ window.initMap = function() {
           center: greenLand
         });
 
-        for (var i = 0; i < SlideList.length; i++) {
-          var marker = new google.maps.Marker({
-            position: SlideList[i].coords,
-            map: map,
-            title: SlideList[i].title
-          });
+        var markers=[];
 
-          marker.addListener('click', function(index){
-            console.log(index);
+        for (var i = 0; i < SlideList.length; i++) {
+            markers[i] = new google.maps.Marker({
+              position: SlideList[i].coords,
+              map: map,
+              title: SlideList[i].title
+            })
+            markers[i].index = i;
+
+          google.maps.event.addListener(markers[i], 'click', function(){
+            flkty.select (this.index)
+            console.log(this.index)
           })
         }
+        flkty.on('change', function(index){
+          console.log('Flickity change ' + index)
+          map.panTo(SlideList[index].coords)
+          map.setZoom(7);
+        })
       }
+
